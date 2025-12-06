@@ -1,0 +1,171 @@
+/* 다크 테마 기본 설정 */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 3단 레이아웃 */
+.wrapper {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* 너비 확장 */
+    padding: 20px;
+    align-items: flex-start;
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* 패널 공통 스타일 */
+.panel, .game-container {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* 좌/우측 패널 스타일 */
+.panel {
+    flex: 1;
+    min-width: 200px;
+}
+
+.panel h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* 리스트 스타일 (당첨금안내, 통계 공통) */
+.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-group li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #2c2c2c;
+    font-size: 0.9rem;
+}
+
+.list-group li:last-child { border-bottom: none; }
+.label { color: #aaa; }
+.value { color: #fff; font-weight: bold; }
+
+.cost-info {
+    margin-top: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.cost { color: #ffffff; }
+
+
+/* 중앙 게임 영역 */
+.game-container {
+    flex: 2;
+    text-align: center;
+}
+
+h1 { margin-top: 0; color: #fff; font-size: 1.8rem; }
+h3 { margin: 10px 0; color: #aaa; font-size: 0.9rem; }
+
+/* 현황판 */
+.scoreboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #2c2c2c;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.score-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85rem;
+}
+
+.score-item span:first-child { margin-bottom: 5px; color: #aaa; }
+.score-item span:last-child { font-weight: bold; font-size: 1rem; }
+
+/* 색상 클래스 */
+.val-white { color: #ffffff; }
+.val-green { color: #4CAF50; }
+.val-red { color: #ff5252; }
+
+/* 게임 요소 */
+.game-area { margin-bottom: 20px; }
+.section { margin-bottom: 20px; }
+
+.ball-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    min-height: 45px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.placeholder { color: #555; font-size: 0.9rem; }
+
+.ball {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.plus-sign { font-size: 20px; color: #777; margin: 0 5px; }
+
+.message {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #ffd700;
+    min-height: 1.5em;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: opacity 0.2s;
+}
+
+#buy-btn { background-color: #4CAF50; color: white; }
+#buy-btn:hover { background-color: #45a049; }
+
+.secondary-btn { background-color: #444; color: #ccc; margin-top: 10px; }
+.secondary-btn:hover { background-color: #555; }

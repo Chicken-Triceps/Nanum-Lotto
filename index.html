@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로또 6/45 시뮬레이터 (Dark)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="panel info-panel">
+            <h2>가상 당첨금 안내</h2>
+            <ul class="list-group">
+                <li>
+                    <span class="label">1등</span>
+                    <span class="value">2,000,000,000원</span>
+                </li>
+                <li>
+                    <span class="label">2등</span>
+                    <span class="value">50,000,000원</span>
+                </li>
+                <li>
+                    <span class="label">3등</span>
+                    <span class="value">2,000,000원</span>
+                </li>
+                <li>
+                    <span class="label">4등</span>
+                    <span class="value">50,000원</span>
+                </li>
+                <li>
+                    <span class="label">5등</span>
+                    <span class="value">5,000 원</span>
+                </li>
+            </ul>
+            <div class="cost-info">
+                <span>회당 비용</span>
+                <span class="cost">1,000 원</span>
+            </div>
+        </aside>
+
+        <main class="game-container">
+            <h1>로또 6/45 시뮬레이터</h1>
+            
+            <div class="scoreboard">
+                <div class="score-item">
+                    <span>투자금</span>
+                    <span id="total-spent" class="val-white">0원</span>
+                </div>
+                <div class="score-item">
+                    <span>구매 횟수</span>
+                    <span id="buy-count" class="val-white">0회</span>
+                </div>
+                <div class="score-item">
+                    <span>누적 당첨금</span>
+                    <span id="total-won" class="val-green">0원</span>
+                </div>
+                <div class="score-item">
+                    <span>손익율</span>
+                    <span id="yield-rate">0%</span>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <div class="section">
+                    <h3>가상 당첨번호</h3>
+                    <div id="win-numbers" class="ball-container">
+                        <span class="placeholder">추첨 대기중...</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>구매 번호 (자동)</h3>
+                    <div id="my-numbers" class="ball-container">
+                        <span class="placeholder">구매 대기중...</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="message" class="message">결과 대기중...</div>
+
+            <button id="buy-btn">추첨</button>
+            <button id="reset-btn" class="secondary-btn">초기화</button>
+        </main>
+
+        <aside class="panel stats-panel">
+            <h2>당첨 횟수</h2>
+            <ul class="list-group">
+                <li>
+                    <span class="label">1등</span>
+                    <span class="value" id="count-1">0회</span>
+                </li>
+                <li>
+                    <span class="label">2등</span>
+                    <span class="value" id="count-2">0회</span>
+                </li>
+                <li>
+                    <span class="label">3등</span>
+                    <span class="value" id="count-3">0회</span>
+                </li>
+                <li>
+                    <span class="label">4등</span>
+                    <span class="value" id="count-4">0회</span>
+                </li>
+                <li>
+                    <span class="label">5등</span>
+                    <span class="value" id="count-5">0회</span>
+                </li>
+                <li>
+                    <span class="label" style="color:#aaa;">낙첨</span>
+                    <span class="value" id="count-0" style="color:#aaa;">0회</span>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
